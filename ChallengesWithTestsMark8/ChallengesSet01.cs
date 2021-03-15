@@ -32,18 +32,15 @@ namespace ChallengesWithTestsMark8
         public int GetSmallestNumber(int number1, int number2)
         {
             //throw new NotImplementedException();
-            int smallestNumber = 0;
-
-            if (number1 < smallestNumber)
+            
+            if (number1 < number2)
             {
-                smallestNumber = number1;
+                return number1;
             }
-            if (number2 < smallestNumber)
+            else
             {
-                smallestNumber = number2;
+                return number2;
             }
-
-            return smallestNumber;
         }
 
         public long Multiply(long factor1, long factor2)
@@ -54,13 +51,18 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson) 
         {
-            //throw new NotImplementedException();
-            return ($"Hello, {nameOfPerson}!");
-            //Console.WriteLine($"Hello, {nameOfPerson}!");
+            if(nameOfPerson != "")
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
+            else
+            {
+                return "Hello!";
+            }
         }
         public string GetHey()
         {
-            return "Hey!";
+            return "HEY!";
         }
     }
 }
